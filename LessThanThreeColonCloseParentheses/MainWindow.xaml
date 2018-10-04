@@ -5,8 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LessThanThreeColonCloseParentheses"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="FirstAnniversary SmileyFace" Height="540" Width="960">
+    
     <Grid>
-        
+        <Grid.Resources>
+            <ImageBrush x:Key="Snapchats" ImageSource="C:\Users\jonat\source\repos\LessThanThreeColonCloseParentheses\LessThanThreeColonCloseParentheses\bin\Debug\ButtonStickers\Snapchats.png" Stretch="UniformToFill"/>
+            <ImageBrush x:Key="SeniorYear" ImageSource="C:\Users\jonat\source\repos\LessThanThreeColonCloseParentheses\LessThanThreeColonCloseParentheses\bin\Debug\ButtonStickers\SeniorYear.jpg" Stretch="UniformToFill"/>
+            <ImageBrush x:Key="Disney" ImageSource="C:\Users\jonat\source\repos\LessThanThreeColonCloseParentheses\LessThanThreeColonCloseParentheses\bin\Debug\ButtonStickers\Disney.jpg"/>
+            <ImageBrush x:Key="HomecomingAndProm" ImageSource="C:\Users\jonat\source\repos\LessThanThreeColonCloseParentheses\LessThanThreeColonCloseParentheses\bin\Debug\ButtonStickers\Prom.jpg" Stretch="UniformToFill"/>
+            <ImageBrush x:Key="Next" ImageSource="C:\Users\jonat\source\repos\LessThanThreeColonCloseParentheses\LessThanThreeColonCloseParentheses\bin\Debug\ButtonStickers\Next.png" Stretch="UniformToFill"/>
+            <ImageBrush x:Key="Previous" ImageSource="C:\Users\jonat\source\repos\LessThanThreeColonCloseParentheses\LessThanThreeColonCloseParentheses\bin\Debug\ButtonStickers\Previous.jpg" Stretch="UniformToFill"/>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="200"/>
+        </Grid.RowDefinitions>
+        <Button Name="Snapchats" Click="Snapchats_Click" Background ="{StaticResource Snapchats}" Grid.Column="2" Grid.Row="0"/>
+        <Button Name="HomecomingAndProm" Click="HomecomingAndProm_Click" Background ="{StaticResource HomecomingAndProm}" Grid.Column="3" Grid.Row="0"/>
+        <Button Name="SeniorYear" Click="SeniorYear_Click" Background ="{StaticResource SeniorYear}" Grid.Column="2" Grid.Row="1"/>
+        <Button Name="Disney" Click="Disney_Click" Grid.Column="3" Grid.Row="1" Background ="{StaticResource Disney}"/>
+        <Button Name="Next" Click="Next_Click" Background ="{StaticResource Next}" Grid.Column="3" Grid.Row="3"/>
+        <Button Name="Previous" Click="Previous_Click" Background ="{StaticResource Previous}" Grid.Column="2" Grid.Row="3"/>
+        <Image Source="{Binding Path=CurrentImageSource}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="4" Stretch="Uniform"/>
     </Grid>
+    
 </Window>
